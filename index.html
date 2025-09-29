@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartelera de Cine</title>
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.4;
-    }
-
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 12px;
-    }
-
-    nav a {
-      text-decoration: none;
-    }
-
-
-    table {
-      width: 100%;
-      border-collapse: collapse; 
-      margin-top: 10px;
-    }
-
-
-    table, th, td {
-      border: 1px solid #333;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-
-    th {
-      background: #f0f0f0;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Cartelera de Cine</h1>
-    <nav>
-      <ul>
-        <li><a href="#cartelera">Películas</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#reserva">Reserva</a></li>
-      </ul>
-    </nav>
+    <h1>🎬 Cartelera de Cine</h1>
   </header>
 
-  <main>
-    <section id="cartelera">
-      <h2>Películas en cartelera</h2>
+  <nav>
+    <ul>
+      <li><a href="#cartelera">Películas</a></li>
+      <li><a href="#horarios">Horarios</a></li>
+      <li><a href="#reserva">Reserva</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Menú lateral</h3>
       <ul>
-        <li><strong>Inception</strong> (Ciencia Ficción)</li>
-        <li><strong>Oppenheimer</strong> (Histórica)</li>
-        <li><strong>Interstellar</strong> (Aventura espacial)</li>
+        <li>Ofertas</li>
+        <li>Próximos estrenos</li>
+        <li>Noticias</li>
       </ul>
+    </aside>
+
+    <main class="main">
+      <section id="cartelera">
+        <h2>Películas en cartelera</h2>
+        <ul>
+          <li><strong>Inception</strong> (Ciencia Ficción)</li>
+          <li><strong>Oppenheimer</strong> (Histórica)</li>
+          <li><strong>Interstellar</strong> (Aventura espacial)</li>
+        </ul>
+      </section>
+
+      <section id="horarios">
+        <h2>Horarios</h2>
+        <table>
+          <tr><th>Película</th><th>Horario</th></tr>
+          <tr><td>Inception</td><td>18:00</td></tr>
+          <tr><td>Oppenheimer</td><td>20:30</td></tr>
+          <tr><td>Interstellar</td><td>22:00</td></tr>
+        </table>
+      </section>
+
+      <section id="reserva">
+        <h2>Reserva tu entrada</h2>
+        <form>
+          <label>Nombre: <input type="text" required></label><br><br>
+          <label>Película:
+            <select>
+              <option>Inception</option>
+              <option>Oppenheimer</option>
+              <option>Interstellar</option>
+            </select>
+          </label><br><br>
+          <button type="submit">Reservar</button>
+        </form>
+      </section>
+    </main>
+
+    <aside class="extra">
+      <h3>Publicidad</h3>
+      <p>🍿 Compra tus palomitas online</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Cartelera de Cine</p>
+  </footer>
+</body>
+</html>
